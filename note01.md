@@ -53,7 +53,7 @@ Aim to create objects that can define and use to solve problems
 Class is essentially a blueprint, an outline, or a template for the object(s).  
 A class should contain attributes and methods  
 ```python
-class Test: #This how a 'class' is initialized
+class Test: #This is how a class is initialized
     def __init__(self,name):
         self.name = name #This is an attribute
         
@@ -63,7 +63,7 @@ class Test: #This how a 'class' is initialized
 
 ## Attributes
 Attributes are variables that exist in the class or an object  
-They must be initialized under the \_\_init\_\_ method for them to work, and have values given beforehand or by the user  
+They must be initialized under the \_\_init\_\_ method and have values given beforehand or by the user
 ```python
 class Phone:
     def __init__(self,name,brand,battery,age):
@@ -136,5 +136,6 @@ class Cat:
     def eat(self): #This is the pair that proves overriding
         return f'{self.name} is now full'
 ```
+## Inheritance
 
 
