@@ -39,19 +39,19 @@ class Dog #this is an OBJECT
 ## Object Oriented Programming
 Used to create 'modular reusable software programs'  
 They use *objects*  
-#### **Not** a procedure-oriented programming (input -> process -> output)  
+#### Procedure-Oriented programming (input -> process -> output)  
 - Calculations  
 - Logical  
 - Repetitive  
-#### It is about the **definition of data**  
+#### OOP (definition of data)
 - What is the name?
 - What is the colour?
 - What is the size?  
 
 Aim to create objects that can define and use to solve problems  
 ## Class
-Class is essentially a blueprint, an outline, or a template for the object(s).
-A class should contain attributes and methods
+Class is essentially a blueprint, an outline, or a template for the object(s).  
+A class should contain attributes and methods  
 ```python
 class Test: #This how a 'class' is initialized
     def __init__(self,name):
@@ -107,14 +107,14 @@ Method available for any class and parameter-dependent objects
 Poly -> Many  
 Morohism -> Forms  
 Ex.  
-Two independent classes can have the same method  
-A method can be used throughout inherited classes  
+Two *independent* classes can have the *same* method  
+A method can be used throughout *inherited* classes  
 ### Overloading
-Type of Polymorphism  
+Type of *Polymorphism*  
 Two methods within a *single class* with *identical* method names but *different* parameters  
-This does not work in Python 3  
+This **does not** work in Python 3  
 ### Override
-Type of Polymorphism  
+Type of *Polymorphism*  
 Two methods with *identical* method names *and* parameters  
 ```python
 class Dog:
