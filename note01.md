@@ -51,18 +51,51 @@ They use *objects*
 Aim to create objects that can define and use to solve problems  
 ## Class
 Class is essentially a blueprint, an outline, or a template for the object(s).
+A class should contain attributes and methods
 ```python
 class Test: #This how a 'class' is initialized
+    def __init__(self,name):
+        self.name = name #This is an attribute
+        
+    def yell(self): #This is a method
+        return f'{self.name} yelled ???' 
 ```
 
 ## Attributes
-
+Attributes are variables that exist in the class or an object  
+They must be initialized under the \_\_init\_\_ method for them to work, and have values given beforehand or by the user  
+```python
+class Phone:
+    def __init__(self,name,brand,battery,age):
+        '''
+        Attributes below are initialized based on the object initialization. 
+        self.status is already given the value 'Stable'
+        '''
+        self.name = name
+        self.brand = brand
+        self.battery = battery
+        self.age = age
+        self.status = 'Stable'
+```
 ## Methods
+Methods are the class's/object's callable functions  
+They must always have 'self' as the first argument  
+```python
+class Person:
+    def __init__(self,name,age,number,address): #Example
+        self.name = name
+        self.age = age
+        self.number = number
+        self.address = address
+        
+    def birthday(self): #Another example. For methods to function, they will need self.
+        return f'Happy birthday {self.name}! You are now {self.age + 1} years old!'
+```
 
 ## Encapsulation
-Protecting information
-Can hide certain attributes and methods
-In python, use double underscore '__' as prefix
+Protecting information  
+Can hide certain attributes and methods  
+In python, use double underscore '__' as prefix  
 ```python
 class Test:
     def __init__(self,name,s_num):
@@ -70,19 +103,19 @@ class Test:
         self.__s_num = s_num #Another encapsulation
 ```
 ## Polymorphism
-Method available for any class and parameter-dependent objects
-Poly -> Many
-Morohism -> Forms
-Ex.
-Two independent classes can have the same method
-A method can be used throughout inherited classes
+Method available for any class and parameter-dependent objects   
+Poly -> Many  
+Morohism -> Forms  
+Ex.  
+Two independent classes can have the same method  
+A method can be used throughout inherited classes  
 ### Overloading
-Type of Polymorphism
-Two methods within a *single class* with *identical* method names but *different* parameters
-This does not work in Python 3
+Type of Polymorphism  
+Two methods within a *single class* with *identical* method names but *different* parameters  
+This does not work in Python 3  
 ### Override
-Type of Polymorphism
-Two methods with *identical* method names *and* parameters
+Type of Polymorphism  
+Two methods with *identical* method names *and* parameters  
 ```python
 class Dog:
     def __init__(self,name,breed,weight):
