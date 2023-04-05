@@ -50,29 +50,58 @@ They use *objects*
 
 Aim to create objects that can define and use to solve problems  
 ## Class
-Class 
+Class is essentially a blueprint, an outline, or a template for the object(s).
+```python
+class Test: #This how a 'class' is initialized
+```
+
 ## Attributes
 
 ## Methods
 
-## Encapsulations
-
-## Polymorphism
-
-## Override
+## Encapsulation
+Protecting information
+Can hide certain attributes and methods
+In python, use double underscore '__' as prefix
 ```python
-# Example class
-
-class Person:
-    def __init__(self, name):
+class Test:
+    def __init__(self,name,s_num):
+        self.__name = name #Encapsulation
+        self.__s_num = s_num #Another encapsulation
+```
+## Polymorphism
+Method available for any class and parameter-dependent objects
+Poly -> Many
+Morohism -> Forms
+Ex.
+Two independent classes can have the same method
+A method can be used throughout inherited classes
+### Overloading
+Type of Polymorphism
+Two methods within a *single class* with *identical* method names but *different* parameters
+This does not work in Python 3
+### Override
+Type of Polymorphism
+Two methods with *identical* method names *and* parameters
+```python
+class Dog:
+    def __init__(self,name,breed,weight):
         self.name = name
-       
-    def __str__(self):
-        return f'Person Object called: {self.name}'
-       
-    def __repr__(self):
-        return self.__str__()
-    
+        self.breed = breed
+        self.weight = weight
+        
+     def eat(self): #This is an example of overriding
+        return f'{self.name} is now full'
+   
+
+class Cat:
+    def __init__(self,name,breed,weight):
+        self.name = name
+        self.breed = breed
+        self.weight = weight
+        
+    def eat(self): #This is the pair that proves overriding
+        return f'{self.name} is now full'
 ```
 
 
