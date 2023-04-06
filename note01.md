@@ -145,3 +145,103 @@ An inherited class would contain *attributes and methods* that belongs in the pa
 ### Multilevel Inheritance
 *Subclass* inheriting from *another* subclass
 
+### Notes from class
+#### Multi-generation Inheritance
+```python
+class Animal: #Example of a class
+    def __init__(self,first,last,age): #Example of a base override of the initialization method. They require 3 arguments to initialize.
+        self.__fName = first #The three lines are examples of encapsulated attributes
+        self.__Name = last
+        self.__age
+        
+    def speak(self): #This is an example of a method
+        return 'Noise'
+        
+    def __str__(self): #This is a base override of the string method. It allows the Animal object to become a string
+        return f'{self.__FName},{self.__Name}'
+        
+class Dog(Animal): #This is an example of a single inheritance 
+    mammalType = 'Dog' #mammalType is a constant that exists for all Dog objects
+    
+    def speak(self): #Example of override and Polymorphism. It is a method.
+        return 'Bark'
+        
+class Corgi(Dog): #Example of multigenerational inheritance. 
+    tail = 'Fluffy' #This constant only exists in Corgi objects
+    
+    def __init__(self.first,last,age,cuteFactor): #Corgi class needs to override the Animal initialization because class has a custom attribute 'cuteFactor'.
+        super().__init__(first,last,age) #first,last,and age are required for the Animal class. Super() method accesses the parent class to initialize the attributes before initializing the new attribute 'cuteFactor'
+        self.__cuteFactor = cuteFactor
+        
+    def speak(self): #Another example of a method that has override
+        return 'Woof'
+        
+    def getCuteFactor(self): #Example of a method that serves as a getter method that accesses encapsulated attributes
+        return self.__cuteFactor
+ 
+#Initialize all the objects
+a = Animal('First','Last',19)
+b = Dog('First Dog','Last Dog',20)
+c = Corgi('First Corgi','Last Corgi',3,100)
+
+print(a.speak()) #Noise
+print(b.speak()) #Bark
+print(c.speak()) #Woof
+#Override will give different outputs across the classes
+
+print(a)
+print(b)
+print(c)
+#a, b, and c are all printable because they inherited the string override from the Animal class
+
+print(a.mammalType) #Does not work, Animal class does not have mammalType constant
+print(b.mammalType) #Dog class has mammalType constant
+print(c.mammalType) #Corgi inherits mammalType from dog
+    
+```
+#### Multi-parent Inheritance
+```python
+class Animal:
+    def __int__(self,first,last,age):
+        self.__first = first
+        self.__last = last
+        self.__age = age
+        
+    def __str__(self):
+        return f'{self.__first},{self.__last}'
+    
+class Dog:
+    def __init__(self,breed):
+        self.__breed = breed
+       
+    def speak(self):
+        return 'Bark!'
+        
+    def getBreed(self):
+        return self.__breed
+        
+ class Corgi1(Animal, Dog):
+    
+    def __init__(self,first,last,age,breed):
+        Animal.__init__(self,first,last,age):
+        Dog.__init__(self,breed)
+ 
+    def isCute(self):
+        return True
+        
+class Corgi2(Animal, Dog):
+    def __init__(self,first,last,age,breed):
+        super().__init__(first,last,age)
+        super(Dog).__init__(breed)
+        
+    def isCute(self):
+        return True
+        
+c = Corgi1('Cor','Gi',2,'Corgi')
+
+        
+#In multiparent inheritance, initialize both parents
+#To initialize a class with multiple parents they must initialize their parents
+#When super() has no arguments, it will target the first parent
+#Super method does not require self as one of its arguments
+```
