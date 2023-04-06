@@ -126,7 +126,6 @@ class Dog:
      def eat(self): #This is an example of overriding
         return f'{self.name} is now full'
    
-
 class Cat:
     def __init__(self,name,breed,weight):
         self.name = name
@@ -137,5 +136,12 @@ class Cat:
         return f'{self.name} is now full'
 ```
 ## Inheritance
-
+Occurs when an *object* or *class* is based on *another* class, a *parent* class.  
+An inherited class would contain *attributes and methods* that belongs in the parent class.  
+### Single Inheritance 
+*Subclass* inheriting from a *single* parent class
+### Multiple Inheritance
+*Subclass* inherting from *multiple* parent classes
+### Multilevel Inheritance
+*Subclass* inheriting from *another* subclass
 
