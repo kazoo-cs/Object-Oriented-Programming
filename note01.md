@@ -223,7 +223,7 @@ class Dog:
  class Corgi1(Animal, Dog):
     
     def __init__(self,first,last,age,breed):
-        Animal.__init__(self,first,last,age):
+        Animal.__init__(self,first,last,age): #In multiparent inheritance, initialize both parents
         Dog.__init__(self,breed)
  
     def isCute(self):
@@ -231,17 +231,22 @@ class Dog:
         
 class Corgi2(Animal, Dog):
     def __init__(self,first,last,age,breed):
-        super().__init__(first,last,age)
-        super(Dog).__init__(breed)
+        super().__init__(first,last,age) #Super method does not require self as one of its arguments. When super() has no arguments, it will target the first parent
+        super(Dog).__init__(breed) #When super() has an existing class as its argument, it will initialize the class first
         
     def isCute(self):
         return True
         
-c = Corgi1('Cor','Gi',2,'Corgi')
+c = Corgi1('Cor', 'Gi', 2, 'Corgi')
+print('Corgi1:', c)
+print('Is it Cute?:', c.isCute())
+print('Speaking:', c.speak())
+print('Breed:', c.getBreed())
 
-        
-#In multiparent inheritance, initialize both parents
-#To initialize a class with multiple parents they must initialize their parents
-#When super() has no arguments, it will target the first parent
-#Super method does not require self as one of its arguments
+c = Corgi2('Cor', 'Gi', 2, 'Corgi')
+print('Corgi1:', c)
+print('Is it Cute?:', c.isCute())
+print('Speaking:', c.speak())
+print('Breed:', c.getBreed())
+
 ```
