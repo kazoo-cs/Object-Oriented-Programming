@@ -1,14 +1,14 @@
 # Object Oriented Programming Notes 1
 
 ## Terms to know
-- Object
-- Object Oriented Programming
-- Class
-- Attributes
-- Methods
-- Encapsulations
-- Polymorphism
-- Override
+- [Object](https://github.com/kazoo-cs/Object-Oriented-Programming/edit/main/note01.md#object)
+- [Object Oriented Programming](https://github.com/kazoo-cs/Object-Oriented-Programming/edit/main/note01.md#object-oriented-programming)
+- [Class](https://github.com/kazoo-cs/Object-Oriented-Programming/edit/main/note01.md#class)
+- [Attributes](https://github.com/kazoo-cs/Object-Oriented-Programming/edit/main/note01.md#attributes)
+- [Methods](https://github.com/kazoo-cs/Object-Oriented-Programming/edit/main/note01.md#methods)
+- [Encapsulation](https://github.com/kazoo-cs/Object-Oriented-Programming/edit/main/note01.md#encapsulation)
+- [Polymorphism](https://github.com/kazoo-cs/Object-Oriented-Programming/edit/main/note01.md#polymorphism)
+- [Inheritance](https://github.com/kazoo-cs/Object-Oriented-Programming/edit/main/note01.md#inheritance)
 ##
 
 ## Object
@@ -17,7 +17,7 @@ Can be a _variable_, a _data structure_, a _function_, or a _method_
 Has a value that can be referenced by an _identifier_  
 #### In OOP
 It is an _instance_ of a _class_ where the object can be any of the mentioned above  
-Data and functional code merged
+Data and functional code merged  
 - States; characteristics that identifies the object
 - Behaviour; possible functionality of the object
 ```python
@@ -37,8 +37,8 @@ class Dog #this is an OBJECT
         return f'{self.name} ate {food}!"
 ```
 ## Object Oriented Programming
-Used to create 'modular reusable software programs' 
-A module is a file containing python code, classes, definitions, etc.
+Used to create 'modular reusable software programs'  
+A module is a file containing python code, classes, definitions, etc.  
 They use *objects*  
 #### Procedure-Oriented programming (input -> process -> output)  
 - Calculations  
