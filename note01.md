@@ -12,7 +12,7 @@
 ##
 
 ## Object
-#### In CS
+#### In Computer Science
 Can be a _variable_, a _data structure_, a _function_, or a _method_  
 Has a value that can be referenced by an _identifier_  
 #### In OOP
@@ -37,7 +37,8 @@ class Dog #this is an OBJECT
         return f'{self.name} ate {food}!"
 ```
 ## Object Oriented Programming
-Used to create 'modular reusable software programs'  
+Used to create 'modular reusable software programs' 
+A module is a file containing python code, classes, definitions, etc.
 They use *objects*  
 #### Procedure-Oriented programming (input -> process -> output)  
 - Calculations  
@@ -123,7 +124,7 @@ class Dog:
         self.breed = breed
         self.weight = weight
         
-     def eat(self): #This is an example of overriding
+     def eat(self): #First method called 'eat'
         return f'{self.name} is now full'
    
 class Cat:
@@ -132,7 +133,7 @@ class Cat:
         self.breed = breed
         self.weight = weight
         
-    def eat(self): #This is the pair that proves overriding
+    def eat(self): #Second method called 'eat' in a different class. This is an override.
         return f'{self.name} is now full'
 ```
 ## Inheritance
