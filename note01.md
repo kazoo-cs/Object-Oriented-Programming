@@ -139,6 +139,9 @@ class Cat:
 ## Inheritance
 Occurs when an *object* or *class* is based on *another* class, a *parent* class.  
 An inherited class would contain *attributes and methods* that belongs in the parent class.  
+The child/inherited class can *create* new attributes and methods, moreover, *override* them to their liking  
+Child does **not need** a \_\_init\_\_() method when *attributes* remain the same  
+Child does **not need** to restate methods unless there is a need to *override*  
 ### Single Inheritance 
 *Subclass* inheriting from a *single* parent class
 ### Multiple Inheritance
